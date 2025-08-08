@@ -45,20 +45,24 @@ Create a `.env` file in the root directory and add your API keys:
 GROQ_API_KEY=your_groq_api_key
 HF_TOKEN=your_huggingface_token
 
-🛠️ Installation & Setup
-1. Clone the repository
+## 🛠️ Installation & Setup
 
-git clone https://github.com/your-username/pdf-qna-rag-app.git
+1. **Clone the repository**
+
+```bash
+git clone https://github.com/shravanssr11/pdf-qna-rag-app.git
 cd pdf-qna-rag-app
 
-2.Create a virtual environment
-
+2. **Create virtual envoirnment**
 python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-3.Install dependencies
+source venv/bin/activate 
 
+3. **Install Dependencies**
 pip install -r requirements.txt
 
-4.Run the Streamlit app
-
+4. **Run the Streamlit app**
 streamlit run app.py
+
+
+
+
