@@ -5,6 +5,8 @@ with st.sidebar:
 
 query=st.text_input("enter your prompt")
 
+# extracting text from uploaded doc
+
 def extract_text_from_pdf(file_bytes):
     text = ""
     with fitz.open(stream=file_bytes, filetype="pdf") as doc:
@@ -21,7 +23,6 @@ if file is not None:
     import os
     from dotenv import load_dotenv
     load_dotenv()
-    os.environ['GOOGLE_API_KEY']=os.getenv('GOOGLE_API_KEY')
     os.environ['HF_TOKEN']=os.getenv('HF_TOKEN')
     groq_api_key=os.getenv('GROQ_API_KEY')
 
@@ -40,8 +41,7 @@ if file is not None:
 
     from langchain_huggingface import HuggingFaceEmbeddings
     embeddings=HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
-
-# Now safe to initialize
+    
     
 # create a vector store
 
